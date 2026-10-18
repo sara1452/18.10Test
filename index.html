@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shield" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
@@ -20,38 +20,43 @@
         </div>
         <div>
             <p class="secure-online">
-                <span>&bull;</span>
+                <span class="dot-security">&bull;</span>
                 SECURE <span>&bull;</span> ONLINE
             </p>
         </div>
     </header>
     <main>
-        <section>
-            <div>
-                <!-- סןרק -->
-            </div>
-            <section>
-                <div>
-                    <span>24</span>
-                    <span>ACTIVE SIGNALS</span>
+        <section class="Central-Square">
+            <div class="radar-space">
+                <div class='radar'>
+                    <div class='sweep'></div>
+                    <div class="dot dot-1"></div>
+                    <div class="dot dot-2"></div>
+                    <div class="dot dot-3"></div>
                 </div>
-                <div>
-                    <span>07</span>
-                    <span>PRIORITY ALERTS</span>
+            </div>
+            <section class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">24</span>
+                    <span class="stat-label">ACTIVE SIGNALS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">07</span>
+                    <span class="stat-label">PRIORITY ALERTS</span>
                 </div>
             </section>
         </section>
-        <section>
-            <button>
+        <section class="actions-bar">
+            <button class="action-btn">
                 <p>
-                    <span>icon</span> New Brief
+                    <span class="material-symbols-outlined">flash_on</span> New Brief
                 </p>
             </button>
-            <button>
-                <p> <span>icon</span>Decode</p>
+            <button class="action-btn">
+                <p> <span class="material-symbols-outlined">code</span>Decode</p>
             </button>
-            <button>
-                <p><span>icon</span> Request Drone</p>
+            <button class="action-btn">
+                <p><span class="material-symbols-outlined">travel</span> Request Drone</p>
             </button>
         </section>
         <section>
