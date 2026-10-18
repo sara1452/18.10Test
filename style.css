@@ -11,9 +11,6 @@ body {
     color: white;
 }
 
-main {
-    height: 100%;
-}
 
 header {
     display: flex;
@@ -82,12 +79,13 @@ h1 {
     background-color: #16121E;
     border-radius: 20px;
 }
-.Central-Square:hover{
+
+.Central-Square:hover {
     border: #03d53a solid 2px;
 }
+
 /*radar*/
 html {
-    overflow: hidden;
     background: radial-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 1)),
         linear-gradient(90deg, dimgrey 1px, transparent 1px),
         linear-gradient(dimgrey 1px, grey 1px);
@@ -185,6 +183,7 @@ html {
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
+
 .actions-bar {
     display: flex;
     gap: 15px;
@@ -194,23 +193,157 @@ html {
     width: 80%;
 }
 
-.action-btn{
+.action-btn {
     background-color: #13141f;
     color: #e0e6ed;
     border: 1px solid #27293d;
     border-radius: 20px;
-    padding: 6px 16px;     
+    padding: 6px 16px;
     font-size: 0.85rem;
     display: inline-flex;
     align-items: center;
-    gap: 6px;               
+    gap: 6px;
     cursor: pointer;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     height: 10vh;
 }
+
 .action-btn:hover {
-    background-color: #1a1c29;  
-    border-color: #03d53a;      
-    color: #03d53a;            
+    background-color: #1a1c29;
+    border-color: #03d53a;
+    color: #03d53a;
     box-shadow: 0 0 10px #273f2e;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 80%;
+    margin: 20px auto;
+    height: 20vh;
+}
+
+.card {
+    background-color: #13141f;
+    border: 1px solid #27293d;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card.critical {
+    border-left: 4px solid #ff2a5f;
+}
+
+.card.high {
+    border-left: 4px solid #ffb703;
+}
+
+.card.medium {
+    border-left: 4px solid #03d53a;
+}
+
+.card>div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card span {
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.card .critical,
+.card span {
+    color: #6c7280;
+}
+
+.card span:first-child {
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid currentColor;
+}
+
+.card.critical span:first-child {
+    color: #ff2a5f;
+    background-color: #2a151a;
+}
+
+.card.high span:first-child {
+    color: #ffb703;
+    background-color: #3e3419;
+}
+
+.card.medium span:first-child {
+    color: #03d53a;
+    background-color:#163d20;
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    color: #e0e6ed;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-bar-bg {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #0b0c10;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.progress-bar-fill {
+    height: 100%;
+    background-color: #03d53a;
+    border-radius: 2px;
+}
+
+.card > div:last-child span {
+    font-size: 0.75rem;
+    color: #6c7280;
+}
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #03d53a;   
+}
+.threat-alert-bar {
+    width: 80%;
+    margin: 10vh auto;
+    background-color: #2a151a;
+    border: 1px solid #ff2a5f;
+    border-radius: 8px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;      
+}
+
+.threat-dot {
+    position: absolute;
+    top: 6px;               
+    left: 12px;         
+    color: #ff2a5f;
+    font-size: 1.2rem;    
+    line-height: 1;
+    text-shadow: 0 0 8px #ff2a5f; 
+}
+.threat-text {
+    color: #ff2a5f;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
