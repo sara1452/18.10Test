@@ -1,0 +1,44 @@
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+}
+.shield {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #03d53a;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+}
+h1{
+    color:#03d53a;
+    font-size: medium;
+}
+.secure-online{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #03d53a;
+    border-radius: 20px;
+    border: #03d53a solid 2px;
+    font-size: small;
+    padding:5px 10px;
+}
